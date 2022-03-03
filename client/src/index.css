@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
-@import url('https://fonts.googleapis.com/css?family=Hind:400');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&display=swap');
 
 /* ! ========================ROOTING======================= */
 
@@ -210,6 +210,10 @@ ul {
   border: 1px solid var(--grey-200);
 }
 
+input {
+  outline-color: var(--grey-300);
+}
+
 .form-row {
   margin-bottom: 1rem;
 }
@@ -237,6 +241,12 @@ ul {
   }
 }
 
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .loading {
   margin: 0 auto;
   width: 6rem;
@@ -260,4 +270,92 @@ ul {
   height: 0.25rem;
   background: var(--primary-500);
   margin: 0 auto;
+}
+
+/* ! NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--primary-500);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--primary-200);
+}
+
+/* ! MAINPAGE */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.todos {
+  margin-top: 1.25rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.25rem;
+}
+
+.todo {
+  width: 100%;
+  max-width: var(--fixed-width);
+  padding: 0.75rem;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-2);
+}
+
+.todo:hover {
+  box-shadow: var(--shadow-4);
+}
+
+.btn-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--border-radius);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: var(--green-dark);
+}
+
+.edit-btn:hover {
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+.delete-btn {
+  color: var(--red-dark);
+}
+
+.delete-btn:hover {
+  background: var(--red-dark);
+  color: var(--white);
 }

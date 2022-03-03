@@ -3,11 +3,13 @@ const app = express();
 const connectDB = require('./db/connect');
 require('dotenv').config();
 const errorHandlerMiddleware = require('./middleware/error-handler');
+const cors = require('cors');
 
 const todos = require('./routes/todos');
 
 app.use(express.static('../client/public'));
 app.use(express.json());
+app.use(cors());
 
 app.use('/api/v1/todos', todos);
 
