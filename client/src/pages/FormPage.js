@@ -19,8 +19,6 @@ const FormPage = () => {
       await axios.post(url, { name: todo });
       navigate('/');
     }
-
-    setTodo('');
   };
 
   return (
