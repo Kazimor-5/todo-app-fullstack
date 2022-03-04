@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const url = 'http://localhost:5000/api/v1/todos/';
 
 const MainPage = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(['']);
   const [loading, setLoading] = useState(false);
 
   const handleDelete = async (id) => {
@@ -49,7 +49,7 @@ const MainPage = () => {
           <h1 className='title'>Todos</h1>
           <div className='title-underline'></div>
         </div>
-        {todos.length > 0 ? (
+        {todos.length >= 1 ? (
           todos.map((todo) => {
             const { name, _id: taskID } = todo;
 
